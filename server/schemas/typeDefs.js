@@ -9,9 +9,19 @@ const typeDefs = gql`
     savedBook: [Book]
   }
 
+  type Book {
+    _id: ID!
+    authors: [String]
+    description: String!
+    image: String
+    link: String
+    title: String!
+
+  }
+
   type Auth {
     token: ID!
-    profile: Profile
+    user: User
   }
 
   type Query {
